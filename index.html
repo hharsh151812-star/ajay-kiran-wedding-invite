@@ -1,1166 +1,2864 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#24171d">
-<meta name="description" content="Kiran & Ajay Wedding Invitation">
-<title>Kiran & Ajay | Wedding Invitation</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Noto+Serif+Devanagari&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+>
+
+<meta name="theme-color" content="#f3e9dc">
+
+<title>Ajay & Kiran — Wedding Invitation</title>
 
 <style>
-:root {
-  --plum:#24171d;
-  --plum2:#38242c;
-  --wine:#713b49;
-  --gold:#c6a46b;
-  --goldlight:#e4cf9e;
-  --paper:#f7f1e8;
-  --white:#fffaf2;
-  --ink:#30252a;
-  --muted:#74666a;
-  --serif:'Cormorant Garamond',Georgia,serif;
-  --sans:'DM Sans',Arial,sans-serif;
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:75px}
+html{
+    width:100%;
+    min-height:100%;
+    scroll-behavior:smooth;
+}
+
 body{
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:var(--sans);
-  line-height:1.65;
-  overflow-x:hidden;
-}
-a{text-decoration:none;color:inherit}
-button{font:inherit;cursor:pointer}
-::selection{background:var(--goldlight);color:var(--plum)}
+    width:100%;
+    min-height:100%;
 
-.cover{
-  min-height:100vh;
-  min-height:100svh;
-  display:grid;
-  place-items:center;
-  position:relative;
-  overflow:hidden;
-  text-align:center;
-  color:var(--white);
-  padding:45px 20px;
-  background:
-    radial-gradient(ellipse at 50% 40%,rgba(119,65,77,.4),transparent 55%),
-    linear-gradient(145deg,#1b1217,#38242c 60%,#21151b);
-}
-.cover:before{
-  content:"";
-  position:absolute;
-  inset:14px;
-  border:1px solid rgba(198,164,107,.6);
-  pointer-events:none;
-}
-.cover:after{
-  content:"";
-  position:absolute;
-  inset:21px;
-  border:1px solid rgba(228,207,158,.2);
-  pointer-events:none;
-}
-.cover-content{
-  width:min(100%,700px);
-  position:relative;
-  z-index:2;
-  animation:appear 1.5s ease both;
-}
-@keyframes appear{
-  from{opacity:0;transform:translateY(25px)}
-  to{opacity:1;transform:translateY(0)}
-}
-.topline,.eyebrow{
-  font-size:10px;
-  letter-spacing:4px;
-  text-transform:uppercase;
-}
-.topline{color:var(--goldlight);margin-bottom:28px}
-.ganesh{
-  font-family:'Noto Serif Devanagari',serif;
-  color:var(--goldlight);
-  font-size:22px;
-  margin-bottom:25px;
-}
-.monogram{
-  width:65px;
-  height:65px;
-  display:grid;
-  place-items:center;
-  border:1px solid var(--gold);
-  border-radius:50%;
-  margin:auto auto 25px;
-  color:var(--goldlight);
-  font:28px var(--serif);
-}
-.cover h1{
-  font:400 clamp(65px,13vw,120px)/.85 var(--serif);
-  margin:0;
-}
-.cover h1 span{display:block}
-.cover h1 .amp{
-  color:var(--gold);
-  font-size:.55em;
-  line-height:1.3;
-  font-style:italic;
-}
-.cover-subtitle{
-  font:italic 21px var(--serif);
-  color:#e9dccc;
-  margin:30px auto 15px;
-}
-.gold-line{
-  width:130px;
-  height:1px;
-  margin:25px auto;
-  background:linear-gradient(90deg,transparent,var(--gold),transparent);
-}
-.cover-date{
-  color:var(--goldlight);
-  font-size:10px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  margin:25px 0;
-}
-.enter{
-  display:inline-block;
-  padding:13px 25px;
-  border:1px solid var(--gold);
-  color:var(--goldlight);
-  font-size:10px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  transition:.3s;
-}
-.enter:hover{background:var(--gold);color:var(--plum)}
-.cover-note{
-  font-size:10px;
-  color:#b9a9a5;
-  letter-spacing:2px;
-  margin-top:20px;
-}
-.spark{
-  position:absolute;
-  width:4px;
-  height:4px;
-  border-radius:50%;
-  background:var(--goldlight);
-  box-shadow:0 0 15px 3px rgba(228,207,158,.5);
-  animation:twinkle 3s infinite alternate;
-}
-.s1{top:20%;left:15%}
-.s2{top:30%;right:15%;animation-delay:1s}
-.s3{bottom:20%;left:22%;animation-delay:2s}
-.s4{bottom:25%;right:18%;animation-delay:.5s}
-@keyframes twinkle{
-  from{opacity:.2;transform:scale(.7)}
-  to{opacity:1;transform:scale(1.5)}
+    background:#f3e9dc;
+    color:#302b28;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow-x:hidden;
 }
 
-/* NAVIGATION */
-nav{
-  position:sticky;
-  top:0;
-  z-index:100;
-  min-height:68px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:10px 5%;
-  background:rgba(36,23,29,.98);
-  color:var(--white);
-  border-bottom:1px solid rgba(198,164,107,.3);
-}
-.brand{
-  color:var(--goldlight);
-  font:25px var(--serif);
-  white-space:nowrap;
-}
-.brand small{
-  display:inline-block;
-  font:9px var(--sans);
-  letter-spacing:2px;
-  color:#c8b9b4;
-  margin-left:8px;
-}
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:25px;
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-.nav-links a{
-  font-size:10px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:#eee2d9;
-}
-.nav-links a:hover{color:var(--goldlight)}
-.menu-btn{
-  display:none;
-  background:none;
-  border:1px solid var(--gold);
-  color:var(--goldlight);
-  font-size:23px;
-  width:44px;
-  height:44px;
+button{
+    font-family:inherit;
 }
 
-/* GENERAL SECTIONS */
-section.content{
-  padding:100px 20px;
-  position:relative;
-}
-.inner{
-  width:min(100%,1050px);
-  margin:auto;
-}
-.eyebrow{
-  text-align:center;
-  color:var(--wine);
-  margin-bottom:15px;
-}
-.title{
-  text-align:center;
-  color:var(--plum);
-  font:500 clamp(43px,7vw,75px)/1 var(--serif);
-  margin:0 auto;
-}
-.title em{color:var(--wine);font-weight:400}
-.divider{
-  width:100px;
-  height:1px;
-  margin:28px auto;
-  background:linear-gradient(90deg,transparent,var(--gold),transparent);
-}
-.lead{
-  max-width:650px;
-  margin:auto;
-  text-align:center;
-  color:var(--muted);
-  font:italic 22px/1.7 var(--serif);
-}
-.intro{background:var(--white)}
-.intro-copy{
-  max-width:700px;
-  margin:25px auto;
-  text-align:center;
-  color:var(--muted);
-  font:22px/1.7 var(--serif);
-}
-.signature{
-  text-align:center;
-  color:var(--wine);
-  font:italic 28px var(--serif);
+.hidden{
+    display:none !important;
 }
 
-/* COUNTDOWN */
-.countdown-panel{
-  max-width:740px;
-  margin:55px auto 0;
-  padding:30px 20px;
-  background:var(--paper);
-  border:1px solid rgba(126,91,72,.25);
-  position:relative;
-}
-.countdown-panel:before{
-  content:"";
-  position:absolute;
-  inset:8px;
-  border:1px solid rgba(198,164,107,.3);
-  pointer-events:none;
-}
-.count-label{
-  display:block;
-  text-align:center;
-  color:var(--wine);
-  font-size:10px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  margin-bottom:20px;
-}
-.countdown{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  text-align:center;
-}
-.countdown strong{
-  display:block;
-  font:500 clamp(30px,5vw,48px) var(--serif);
-  color:var(--plum);
-}
-.countdown span{
-  font-size:9px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--muted);
-}
-.count-message{
-  text-align:center;
-  color:var(--wine);
-  font:italic 18px var(--serif);
-  margin:18px 0 0;
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root{
+
+    --cream:#f3e9dc;
+    --paper:#fbf6ef;
+
+    --sage:#aeb9a9;
+    --sage-dark:#718172;
+
+    --rose:#c99191;
+    --rose-dark:#a96769;
+
+    --gold:#b99a69;
+
+    --ink:#302b28;
+
+    --line:rgba(48,43,40,.18);
+
 }
 
-/* SCRATCH CARD */
-.scratch-section{background:#efe5d8}
-.scratch-card{
-  width:min(100%,430px);
-  aspect-ratio:1.3;
-  margin:40px auto 0;
-  position:relative;
-  overflow:hidden;
-  background:var(--white);
-  border:1px solid rgba(126,91,72,.3);
-  box-shadow:0 15px 40px rgba(53,34,38,.1);
-}
-.scratch-under{
-  position:absolute;
-  inset:0;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
-}
-.scratch-under small{
-  color:var(--wine);
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
-.scratch-under strong{
-  color:var(--plum);
-  font:500 clamp(28px,6vw,40px) var(--serif);
-  margin:10px 0;
-}
-.scratch-under span{
-  color:var(--muted);
-  font:italic 18px var(--serif);
-}
-#scratchCanvas{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  touch-action:none;
-  cursor:crosshair;
-}
-#scratchCanvas.cleared{
-  opacity:0;
-  pointer-events:none;
-  transition:opacity .5s;
-}
-.button{
-  display:block;
-  margin:25px auto 0;
-  padding:13px 25px;
-  border:1px solid var(--wine);
-  background:transparent;
-  color:var(--wine);
-  font-size:10px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-.button:hover{background:var(--wine);color:white}
-.hint{
-  text-align:center;
-  color:var(--muted);
-  font-size:11px;
-  letter-spacing:1px;
-  margin-top:15px;
+
+/* =========================================================
+   ENTRANCE SCREEN
+========================================================= */
+
+#entrance{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+    min-height:620px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 42%,
+            #fffaf4 0%,
+            #f8eee2 45%,
+            #eadbcd 100%
+        );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
 }
 
-/* EVENT CARDS */
-.events{background:var(--white)}
-.card-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:25px;
-  max-width:900px;
-  margin:50px auto 0;
-}
-.card{
-  position:relative;
-  text-align:center;
-  padding:45px 25px;
-  background:var(--paper);
-  border:1px solid rgba(126,91,72,.22);
-  box-shadow:0 12px 35px rgba(53,34,38,.06);
-}
-.card:before{
-  content:"";
-  position:absolute;
-  inset:8px;
-  border:1px solid rgba(198,164,107,.3);
-  pointer-events:none;
-}
-.card-icon{
-  width:45px;
-  height:45px;
-  display:grid;
-  place-items:center;
-  margin:0 auto 18px;
-  border:1px solid var(--gold);
-  border-radius:50%;
-  color:var(--wine);
-  font-size:22px;
-}
-.card-kicker{
-  color:var(--wine);
-  font-size:10px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
-.card h3{
-  margin:5px 0;
-  color:var(--plum);
-  font:500 clamp(30px,4vw,40px) var(--serif);
-}
-.card-date{
-  display:block;
-  margin-top:15px;
-  font:500 18px var(--serif);
-}
-.card-detail{
-  display:block;
-  color:var(--muted);
-  font-size:13px;
-  margin-top:8px;
-  line-height:1.8;
-}
-.map-link{
-  display:inline-block;
-  margin-top:20px;
-  padding:11px 18px;
-  border:1px solid var(--wine);
-  color:var(--wine);
-  font-size:10px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-.map-link:hover{background:var(--wine);color:white}
 
-/* FAMILY */
-.venue{background:var(--paper)}
-.family{
-  background:var(--plum);
-  color:var(--white);
-}
-.family .title{color:var(--white)}
-.family .title em{color:var(--goldlight)}
-.family .eyebrow{color:var(--goldlight)}
-.family .divider{background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.family-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:25px;
-  max-width:820px;
-  margin:50px auto 0;
-}
-.family-card{
-  position:relative;
-  text-align:center;
-  padding:40px 20px;
-  border:1px solid rgba(198,164,107,.4);
-}
-.family-card:before{
-  content:"";
-  position:absolute;
-  inset:7px;
-  border:1px solid rgba(198,164,107,.2);
-  pointer-events:none;
-}
-.family-card .card-kicker{color:var(--goldlight)}
-.family-card h3{
-  color:var(--white);
-  font:500 clamp(25px,3vw,34px)/1.2 var(--serif);
-}
-.family-card p:last-child{
-  color:#c8b9b4;
-  font-size:12px;
-}
+/* =========================================================
+   ENTRANCE DECORATIVE SIDES
+========================================================= */
 
-/* BLESSINGS */
-.blessing{background:#efe5d8;text-align:center}
-.lotus{
-  width:150px;
-  height:150px;
-  margin:40px auto 20px;
-  border:1px solid var(--gold);
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:var(--white);
-  color:var(--wine);
-  font-size:65px;
-  transition:.4s;
-}
-.lotus:hover{transform:scale(1.06) rotate(5deg)}
-.blessing-text{
-  max-width:600px;
-  margin:auto;
-  color:var(--wine);
-  font:italic 23px/1.5 var(--serif);
-  min-height:65px;
-}
-.blessing-hint{
-  font-size:10px;
-  letter-spacing:2px;
-  color:var(--muted);
-  margin-top:15px;
-}
+.entrance-shape{
 
-/* CLOSING */
-.closing{background:var(--white);text-align:center}
-.closing-panel{
-  max-width:850px;
-  margin:auto;
-  padding:65px 25px;
-  border:1px solid rgba(126,91,72,.25);
-  outline:1px solid rgba(198,164,107,.3);
-  outline-offset:-9px;
-  background:var(--paper);
-}
-.closing h2{
-  color:var(--plum);
-  font:500 clamp(45px,7vw,75px)/1 var(--serif);
-}
-.closing-copy{
-  max-width:600px;
-  margin:25px auto;
-  color:var(--muted);
-  font:italic 21px/1.6 var(--serif);
-}
-.closing-date{
-  color:var(--wine);
-  font:italic 25px var(--serif);
-}
-footer{
-  padding:30px 15px;
-  text-align:center;
-  color:#c8b9b4;
-  background:var(--plum);
-  font-size:10px;
-  letter-spacing:2px;
-}
-
-/* ANIMATIONS */
-.reveal{
-  opacity:0;
-  transform:translateY(25px);
-  transition:opacity .8s ease,transform .8s ease;
-}
-.reveal.visible{
-  opacity:1;
-  transform:translateY(0);
-}
-.progress{
-  position:fixed;
-  z-index:200;
-  top:0;
-  left:0;
-  height:2px;
-  width:0;
-  background:var(--gold);
-}
-
-/* MOBILE */
-@media(max-width:850px){
-  .menu-btn{display:block}
-  .nav-links{
-    display:none;
     position:absolute;
-    top:100%;
+
+    pointer-events:none;
+
+    opacity:.30;
+
+}
+
+
+/* LEFT */
+
+.entrance-left{
+
+    left:-90px;
+    bottom:-100px;
+
+    width:230px;
+    height:720px;
+
+    transform:rotate(-17deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(163,178,159,.65),
+            transparent
+        );
+
+    clip-path:polygon(
+        45% 0,
+        72% 50%,
+        57% 100%,
+        32% 55%
+    );
+
+}
+
+
+/* RIGHT */
+
+.entrance-right{
+
+    right:-90px;
+    bottom:-100px;
+
+    width:230px;
+    height:720px;
+
+    transform:rotate(17deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(201,159,151,.55),
+            transparent
+        );
+
+    clip-path:polygon(
+        45% 0,
+        72% 50%,
+        57% 100%,
+        32% 55%
+    );
+
+}
+
+
+/* =========================================================
+   SMALL DECORATIVE DOTS
+========================================================= */
+
+.entrance-dot{
+
+    position:absolute;
+
+    width:5px;
+    height:5px;
+
+    border-radius:50%;
+
+    background:#b99a69;
+
+    opacity:.35;
+
+}
+
+.dot-one{
+    left:20%;
+    top:27%;
+}
+
+.dot-two{
+    right:18%;
+    top:34%;
+}
+
+.dot-three{
+    left:27%;
+    bottom:27%;
+}
+
+.dot-four{
+    right:25%;
+    bottom:23%;
+}
+
+
+/* =========================================================
+   ENTRANCE LOGO
+========================================================= */
+
+.entrance-content{
+
+    position:absolute;
+
+    top:30%;
+
+    width:100%;
+
+    text-align:center;
+
+    z-index:10;
+
+}
+
+
+/* MONOGRAM */
+
+.monogram{
+
+    display:inline-block;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:105px;
+
+    line-height:.75;
+
+    font-weight:bold;
+
+    letter-spacing:-11px;
+
+    color:#292624;
+
+}
+
+
+/* AMPERSAND */
+
+.monogram .amp{
+
+    font-size:39px;
+
+    font-weight:normal;
+
+    font-style:italic;
+
+    letter-spacing:0;
+
+    margin:0 7px;
+
+}
+
+
+/* NAMES */
+
+.entrance-names{
+
+    margin-top:39px;
+
+    font-size:9px;
+
+    letter-spacing:6px;
+
+    color:#302b28;
+
+}
+
+
+/* =========================================================
+   CSS WAX SEAL
+========================================================= */
+
+.seal-button{
+
+    position:absolute;
+
+    z-index:50;
+
+    left:50%;
+
+    bottom:110px;
+
+    width:148px;
+    height:148px;
+
+    margin-left:-74px;
+
+    border:none;
+
+    background:transparent;
+
+    padding:0;
+
+    cursor:pointer;
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+.seal{
+
+    position:absolute;
+
     left:0;
-    right:0;
-    padding:15px 25px 25px;
-    background:var(--plum);
+    top:0;
+
+    width:148px;
+    height:148px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 28%,
+            #d18d8f 0%,
+            #b66c70 42%,
+            #96575c 100%
+        );
+
+    box-shadow:
+
+        0 15px 25px
+        rgba(72,42,38,.22),
+
+        inset
+        3px 4px 6px
+        rgba(255,255,255,.22),
+
+        inset
+        -6px -8px 12px
+        rgba(65,28,30,.25);
+
+    transform:rotate(-4deg);
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+}
+
+
+/* WAX EDGE */
+
+.seal:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:126px;
+    height:126px;
+
+    border-radius:50%;
+
+    border:
+
+        1px solid
+        rgba(255,225,218,.60);
+
+}
+
+
+/* INNER DASHED CIRCLE */
+
+.seal:after{
+
+    content:"";
+
+    position:absolute;
+
+    width:111px;
+    height:111px;
+
+    border-radius:50%;
+
+    border:
+
+        1px dashed
+        rgba(255,225,218,.52);
+
+}
+
+
+/* INNER CONTENT */
+
+.seal-inner{
+
+    position:relative;
+
+    z-index:10;
+
+    width:94px;
+    height:94px;
+
+    border-radius:50%;
+
+    border:
+
+        1px solid
+        rgba(255,225,218,.50);
+
+    display:flex;
+
     flex-direction:column;
-    align-items:stretch;
-    gap:0;
-    border-top:1px solid rgba(198,164,107,.3);
-  }
-  .nav-links.open{display:flex}
-  .nav-links a{
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.seal-monogram{
+
+    color:#ffe9e1;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:27px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+}
+
+
+.seal-open{
+
+    margin-top:8px;
+
+    color:#fbe0da;
+
+    font-size:7px;
+
+    letter-spacing:3px;
+
+}
+
+
+.seal-button:active{
+
+    transform:scale(.94);
+
+}
+
+
+/* INSTRUCTION */
+
+.enter-text{
+
+    position:absolute;
+
+    z-index:40;
+
+    bottom:75px;
+
+    left:0;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+    color:#302b28;
+
+    opacity:.48;
+
+}
+
+
+/* =========================================================
+   MAIN INVITATION
+========================================================= */
+
+#invitation{
+
+    width:100%;
+
+    overflow:hidden;
+
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.section{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:80vh;
+
+    padding:
+
+        110px
+        24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+.kicker{
+
+    font-size:8px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    opacity:.55;
+
+}
+
+
+.number{
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+    opacity:.32;
+
+    margin-bottom:25px;
+
+}
+
+
+.section-title{
+
+    margin-top:25px;
+
+    margin-bottom:28px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:56px;
+
+    line-height:.88;
+
+    font-weight:normal;
+
+    letter-spacing:-3px;
+
+}
+
+
+.section-title em{
+
+    font-weight:normal;
+
+    font-style:italic;
+
+}
+
+
+.copy{
+
+    width:100%;
+
+    max-width:480px;
+
+    font-size:13px;
+
+    line-height:1.9;
+
+    opacity:.64;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    height:100vh;
+
+    min-height:650px;
+
+    overflow:hidden;
+
+    background:#f3e9dc;
+
+}
+
+
+/* HERO CONTENT */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+
+.hero-title{
+
+    margin:
+
+        30px
+        0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:76px;
+
+    line-height:.72;
+
+    font-weight:bold;
+
+    letter-spacing:-6px;
+
+}
+
+
+.hero-title .amp{
+
+    font-size:38px;
+
+    font-style:italic;
+
+    font-weight:normal;
+
+    letter-spacing:0;
+
+}
+
+
+.hero-subtitle{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:21px;
+
+    font-style:italic;
+
+    margin-top:20px;
+
+}
+
+
+.hero-star{
+
+    margin:
+
+        30px
+        0;
+
+    color:#b99a69;
+
+    font-size:19px;
+
+}
+
+
+.hero-location{
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+}
+
+
+/* =========================================================
+   DECORATIVE CUTOUTS
+========================================================= */
+
+.cutout{
+
+    position:absolute;
+
+    z-index:3;
+
+    width:180px;
+
+    height:330px;
+
+    transition:
+
+        transform
+        .12s
+        linear;
+
+}
+
+
+.cutout-card{
+
+    position:absolute;
+
+    left:20px;
+    top:15px;
+
+    width:140px;
+    height:270px;
+
+    background:
+        rgba(251,246,239,.92);
+
+    border:
+
+        1px solid
+        rgba(185,154,105,.35);
+
+    box-shadow:
+
+        0 18px 30px
+        rgba(60,45,35,.12);
+
+}
+
+
+/* ARCH */
+
+.cutout-arch{
+
+    position:absolute;
+
+    left:43px;
+    top:45px;
+
+    width:94px;
+    height:150px;
+
+    border:
+
+        2px solid
+        #718172;
+
+    border-bottom:none;
+
+    border-radius:
+
+        60px
+        60px
+        0
+        0;
+
+}
+
+
+/* ARCH CURTAIN */
+
+.cutout-curtain-left{
+
+    position:absolute;
+
+    left:36px;
+    top:39px;
+
+    width:16px;
+    height:160px;
+
+    border-left:
+
+        3px solid
+        #c99191;
+
+    border-radius:50%;
+
+}
+
+
+.cutout-curtain-right{
+
+    position:absolute;
+
+    right:36px;
+    top:39px;
+
+    width:16px;
+    height:160px;
+
+    border-right:
+
+        3px solid
+        #c99191;
+
+    border-radius:50%;
+
+}
+
+
+/* FLOWERS */
+
+.cutout-flower{
+
+    position:absolute;
+
+    width:14px;
+    height:14px;
+
+    border-radius:50%;
+
+    background:#c99191;
+
+}
+
+
+.flower-a{
+    left:48px;
+    top:40px;
+}
+
+.flower-b{
+    right:48px;
+    top:40px;
+}
+
+.flower-c{
+    left:66px;
+    top:27px;
+}
+
+.flower-d{
+    right:66px;
+    top:27px;
+}
+
+
+/* GOLD LINE */
+
+.cutout-gold{
+
+    position:absolute;
+
+    left:45px;
+    right:45px;
+
+    top:210px;
+
+    height:2px;
+
+    background:#b99a69;
+
+}
+
+
+/* LEFT POSITION */
+
+.cutout-left{
+
+    left:-45px;
+
+    top:80px;
+
+}
+
+
+/* RIGHT POSITION */
+
+.cutout-right{
+
+    right:-45px;
+
+    bottom:45px;
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+
+    background:#eee1d5;
+
+}
+
+
+.intro .section-title{
+
+    color:#37312e;
+
+}
+
+
+/* =========================================================
+   SCRATCH CARD SECTION
+========================================================= */
+
+.reveal{
+
+    background:#f4e9dc;
+
+}
+
+
+/* SCRATCH CONTAINER */
+
+.scratch-box{
+
+    position:relative;
+
+    width:92%;
+
+    max-width:500px;
+
+    height:270px;
+
+    margin:
+
+        40px
+        auto
+        15px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+        0 20px 40px
+        rgba(70,48,35,.13);
+
+}
+
+
+/* REAL DATE UNDERNEATH */
+
+.date-card{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#fbf6ef;
+
+    border:
+
+        1px solid
+        rgba(185,154,105,.40);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.date-small{
+
+    font-size:8px;
+
+    letter-spacing:4px;
+
+    opacity:.50;
+
+}
+
+
+.date-large{
+
+    margin:
+
+        17px
+        0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:39px;
+
+    line-height:1;
+
+}
+
+
+.date-place{
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+    opacity:.50;
+
+}
+
+
+/* SCRATCH CANVAS */
+
+#scratch{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    touch-action:none;
+
+}
+
+
+/* SCRATCH HINT */
+
+.scratch-hint{
+
+    font-size:8px;
+
+    letter-spacing:2px;
+
+    opacity:.42;
+
+}
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+.countdown-section{
+
+    background:#f9f1e8;
+
+}
+
+
+.countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:17px;
+
+    margin-top:45px;
+
+}
+
+
+.count{
+
+    min-width:60px;
+
+}
+
+
+.count strong{
+
     display:block;
-    padding:13px 0;
-    border-bottom:1px solid rgba(255,255,255,.08);
-  }
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:43px;
+
+    font-weight:normal;
+
+    line-height:.85;
+
 }
+
+
+.count span{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:7px;
+
+    letter-spacing:2px;
+
+    opacity:.48;
+
+}
+
+
+/* =========================================================
+   WEDDING SECTION
+========================================================= */
+
+.wedding{
+
+    min-height:100vh;
+
+    background:#718172;
+
+    color:#fbf3e9;
+
+}
+
+
+/* MANDAP */
+
+.mandap{
+
+    position:relative;
+
+    width:320px;
+
+    height:210px;
+
+    margin-bottom:35px;
+
+}
+
+
+/* ROOF */
+
+.mandap-roof{
+
+    position:absolute;
+
+    left:30px;
+    right:30px;
+
+    top:25px;
+
+    height:2px;
+
+    background:#f6e7d6;
+
+}
+
+
+.mandap-roof:before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:-48px;
+
+    width:105px;
+
+    height:70px;
+
+    margin-left:-52px;
+
+    border:
+
+        2px solid
+        #f6e7d6;
+
+    border-bottom:none;
+
+    border-radius:
+
+        100px
+        100px
+        0
+        0;
+
+}
+
+
+/* PILLARS */
+
+.pillar{
+
+    position:absolute;
+
+    top:25px;
+
+    width:2px;
+
+    height:160px;
+
+    background:#f6e7d6;
+
+}
+
+
+.pillar-one{
+    left:48px;
+}
+
+.pillar-two{
+    left:90px;
+}
+
+.pillar-three{
+    right:90px;
+}
+
+.pillar-four{
+    right:48px;
+}
+
+
+/* FLOWERS */
+
+.mandap-flower{
+
+    position:absolute;
+
+    width:13px;
+    height:13px;
+
+    border-radius:50%;
+
+    background:#d6aaa4;
+
+}
+
+
+.mf-one{
+    left:70px;
+    top:45px;
+}
+
+.mf-two{
+    right:70px;
+    top:45px;
+}
+
+.mf-three{
+    left:102px;
+    top:34px;
+}
+
+.mf-four{
+    right:102px;
+    top:34px;
+}
+
+
+/* MANDAP BASE */
+
+.mandap-base{
+
+    position:absolute;
+
+    left:30px;
+    right:30px;
+
+    bottom:25px;
+
+    height:2px;
+
+    background:#f6e7d6;
+
+}
+
+
+/* WEDDING DATE */
+
+.wedding-date{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:78px;
+
+    line-height:.8;
+
+    letter-spacing:-4px;
+
+    margin:
+
+        15px
+        0
+        30px;
+
+}
+
+
+.wedding-date span{
+
+    color:#e0c39b;
+
+}
+
+
+.wedding-location{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:23px;
+
+    line-height:1.2;
+
+    font-style:italic;
+
+}
+
+
+/* MAP BUTTON */
+
+.map-button{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:
+
+        14px
+        23px;
+
+    color:#fff7ee;
+
+    text-decoration:none;
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.45);
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+}
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.closing{
+
+    min-height:75vh;
+
+    background:#f3e9dc;
+
+}
+
+
+.closing-names{
+
+    margin-top:28px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:58px;
+
+    letter-spacing:-3px;
+
+}
+
+
+.closing-amp{
+
+    font-style:italic;
+
+    font-size:32px;
+
+}
+
+
+.final-monogram{
+
+    margin-top:55px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    letter-spacing:5px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media(max-width:600px){
-  section.content{padding:75px 18px}
-  .cover h1{font-size:clamp(60px,17vw,90px)}
-  .cover-subtitle{font-size:18px}
-  .topline{font-size:8px;letter-spacing:2px}
-  .ganesh{font-size:19px}
-  .brand{font-size:22px}
-  .brand small{font-size:8px}
-  .title{font-size:clamp(42px,12vw,60px)}
-  .lead,.intro-copy{font-size:19px}
-  .countdown{gap:3px}
-  .countdown strong{font-size:30px}
-  .countdown span{font-size:8px;letter-spacing:1px}
-  .card-grid,.family-grid{grid-template-columns:1fr;gap:18px;margin-top:35px}
-  .card{padding:38px 22px}
-  .closing-panel{padding:50px 20px}
+
+    .monogram{
+
+        font-size:94px;
+
+        letter-spacing:-10px;
+
+    }
+
+
+    .monogram .amp{
+
+        font-size:36px;
+
+        margin:
+
+            0
+            6px;
+
+    }
+
+
+    .entrance-names{
+
+        margin-top:37px;
+
+        font-size:8px;
+
+        letter-spacing:5px;
+
+    }
+
+
+    .seal-button{
+
+        width:145px;
+        height:145px;
+
+        margin-left:-72.5px;
+
+        bottom:105px;
+
+    }
+
+
+    .seal{
+
+        width:145px;
+        height:145px;
+
+    }
+
+
+    .seal:before{
+
+        width:123px;
+        height:123px;
+
+    }
+
+
+    .seal:after{
+
+        width:108px;
+        height:108px;
+
+    }
+
+
+    .seal-inner{
+
+        width:91px;
+        height:91px;
+
+    }
+
+
+    .enter-text{
+
+        bottom:72px;
+
+        font-size:7px;
+
+    }
+
+
+    .hero-title{
+
+        font-size:70px;
+
+        letter-spacing:-5px;
+
+    }
+
+
+    .hero-title .amp{
+
+        font-size:34px;
+
+    }
+
+
+    .cutout{
+
+        transform:scale(.82);
+
+    }
+
+
+    .cutout-left{
+
+        left:-65px;
+
+    }
+
+
+    .cutout-right{
+
+        right:-65px;
+
+    }
+
+
+    .section-title{
+
+        font-size:52px;
+
+    }
+
+
+    .date-large{
+
+        font-size:34px;
+
+    }
+
+
+    .countdown{
+
+        gap:10px;
+
+    }
+
+
+    .count{
+
+        min-width:58px;
+
+    }
+
+
+    .count strong{
+
+        font-size:39px;
+
+    }
+
+
+    .wedding-date{
+
+        font-size:70px;
+
+    }
+
+
+    .closing-names{
+
+        font-size:50px;
+
+    }
+
 }
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{
-    scroll-behavior:auto!important;
-    animation-duration:.01ms!important;
-    transition-duration:.01ms!important;
-  }
-  .reveal{opacity:1;transform:none}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media(max-height:700px){
+
+    #entrance{
+
+        min-height:550px;
+
+    }
+
+
+    .entrance-content{
+
+        top:25%;
+
+    }
+
+
+    .seal-button{
+
+        bottom:80px;
+
+    }
+
+
+    .enter-text{
+
+        bottom:51px;
+
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
-<div class="progress" id="progress"></div>
 
-<!-- OPENING -->
-<header class="cover" id="top">
-  <span class="spark s1"></span>
-  <span class="spark s2"></span>
-  <span class="spark s3"></span>
-  <span class="spark s4"></span>
+<!-- =====================================================
+     OPENING PAGE
+===================================================== -->
 
-  <div class="cover-content">
-    <p class="topline">A celebration of love & togetherness</p>
-    <p class="ganesh">श्री गणेशाय नमः</p>
-    <div class="monogram">K <span style="color:var(--gold)">&</span> A</div>
+<section id="entrance">
 
-    <h1>
-      <span>Kiran</span>
-      <span class="amp">&</span>
-      <span>Ajay</span>
-    </h1>
 
-    <p class="cover-subtitle">
-      Together with their families, invite you to celebrate their wedding.
-    </p>
+    <div class="entrance-shape entrance-left"></div>
 
-    <div class="gold-line"></div>
+    <div class="entrance-shape entrance-right"></div>
 
-    <p class="cover-date">Tuesday · 24 November 2026 · Bareilly</p>
 
-    <a href="#invitation" class="enter">
-      Enter the invitation ↓
-    </a>
+    <div class="entrance-dot dot-one"></div>
+    <div class="entrance-dot dot-two"></div>
+    <div class="entrance-dot dot-three"></div>
+    <div class="entrance-dot dot-four"></div>
 
-    <p class="cover-note">A new chapter begins</p>
-  </div>
-</header>
 
-<!-- NAVIGATION -->
-<nav>
-  <a class="brand" href="#top">
-    K <span style="color:var(--gold)">&</span> A
-    <small>Wedding<br>Celebration</small>
-  </a>
+    <div class="entrance-content">
 
-  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+        <div class="monogram">
 
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#invitation">Invitation</a></li>
-    <li><a href="#date">The Date</a></li>
-    <li><a href="#events">Events</a></li>
-    <li><a href="#venues">Venues</a></li>
-    <li><a href="#families">Families</a></li>
-  </ul>
-</nav>
+            K
 
-<main>
+            <span class="amp">
+                &amp;
+            </span>
 
-<!-- INVITATION -->
-<section class="content intro" id="invitation">
-  <div class="inner reveal">
-    <p class="eyebrow">With the blessings of our families</p>
+            A
 
-    <h2 class="title">
-      A beautiful beginning,<br>
-      <em>shared with you.</em>
-    </h2>
-
-    <div class="divider"></div>
-
-    <p class="intro-copy">
-      With joyful hearts, we warmly invite you to join us as Kiran and Ajay begin their journey together. Your presence and blessings will make our celebration truly special.
-    </p>
-
-    <p class="signature">— Kiran & Ajay</p>
-
-    <!-- COUNTDOWN -->
-    <div class="countdown-panel" id="date">
-      <span class="count-label">Counting down to the wedding</span>
-
-      <div class="countdown">
-        <div>
-          <strong id="days">00</strong>
-          <span>Days</span>
         </div>
-        <div>
-          <strong id="hours">00</strong>
-          <span>Hours</span>
+
+
+        <div class="entrance-names">
+
+            KIRAN · AJAY
+
         </div>
-        <div>
-          <strong id="minutes">00</strong>
-          <span>Minutes</span>
-        </div>
-        <div>
-          <strong id="seconds">00</strong>
-          <span>Seconds</span>
-        </div>
-      </div>
 
-      <p class="count-message" id="countMessage">
-        24 November 2026 · 8:00 PM
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- SCRATCH CARD -->
-<section class="content scratch-section">
-  <div class="inner reveal">
-    <p class="eyebrow">A little secret</p>
-
-    <h2 class="title">
-      Scratch to <em>reveal the date.</em>
-    </h2>
-
-    <div class="divider"></div>
-
-    <div class="scratch-card" id="scratchCard">
-      <div class="scratch-under">
-        <small>Save the date</small>
-        <strong>24 November 2026</strong>
-        <span>A Tuesday to remember</span>
-      </div>
-      <canvas id="scratchCanvas"></canvas>
     </div>
 
-    <button class="button" id="revealBtn">Reveal date</button>
 
-    <p class="hint" id="scratchHint">
-      Gently rub across the card with your finger.
-    </p>
-  </div>
-</section>
+    <!-- =================================================
+         WAX SEAL
+    ================================================== -->
 
-<!-- EVENTS -->
-<section class="content events" id="events">
-  <div class="inner">
-    <p class="eyebrow reveal">Save these moments</p>
+    <button
+        class="seal-button"
+        id="openInvitation"
+        type="button"
+        aria-label="Open wedding invitation"
+    >
 
-    <h2 class="title reveal">The <em>celebrations.</em></h2>
+        <span class="seal">
 
-    <div class="divider"></div>
+            <span class="seal-inner">
 
-    <div class="card-grid">
-      <article class="card reveal">
-        <div class="card-icon">❋</div>
-        <p class="card-kicker">The day before</p>
-        <h3>Haldi & Mehendi</h3>
-        <span class="card-date">Monday, 23 November 2026</span>
-        <span class="card-detail">10:00 AM onwards</span>
-      </article>
+                <span class="seal-monogram">
+                    K A
+                </span>
 
-      <article class="card reveal">
-        <div class="card-icon">✧</div>
-        <p class="card-kicker">The wedding ceremony</p>
-        <h3>The Wedding</h3>
-        <span class="card-date">Tuesday, 24 November 2026</span>
-        <span class="card-detail">8:00 PM onwards</span>
-      </article>
-    </div>
-  </div>
-</section>
+                <span class="seal-open">
+                    OPEN
+                </span>
 
-<!-- VENUES -->
-<section class="content venue" id="venues">
-  <div class="inner">
-    <p class="eyebrow reveal">We look forward to welcoming you</p>
+            </span>
 
-    <h2 class="title reveal">Find <em>your way.</em></h2>
-
-    <div class="divider"></div>
-
-    <div class="card-grid">
-      <article class="card reveal">
-        <div class="card-icon">⌂</div>
-        <p class="card-kicker">Haldi & Mehendi</p>
-        <h3>My Sweet Home</h3>
-        <span class="card-detail">
-          23 November 2026<br>
-          10:00 AM onwards
         </span>
-        <a class="map-link"
-           href="https://maps.app.goo.gl/2nd24gWdJdm1irLb7"
-           target="_blank" rel="noopener">
-          Open location ↗
-        </a>
-      </article>
 
-      <article class="card reveal">
-        <div class="card-icon">⌖</div>
-        <p class="card-kicker">Wedding ceremony</p>
-        <h3>Diva Lawn</h3>
-        <span class="card-detail">
-          Dohra Road<br>
-          Bareilly, Uttar Pradesh
-        </span>
-        <a class="map-link"
-           href="https://www.google.com/maps/search/?api=1&query=Diva+Lawn%2C+Dohra+Road%2C+Bareilly"
-           target="_blank" rel="noopener">
-          Open location ↗
-        </a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- FAMILIES -->
-<section class="content family" id="families">
-  <div class="inner">
-    <p class="eyebrow reveal">With gratitude</p>
-
-    <h2 class="title reveal">
-      Two families,<br><em>one celebration.</em>
-    </h2>
-
-    <div class="divider"></div>
-
-    <p class="lead reveal" style="color:#d4c5c0">
-      With love and blessings from the families who made this day possible.
-    </p>
-
-    <div class="family-grid">
-      <article class="family-card reveal">
-        <p class="card-kicker">Bride's family</p>
-        <h3>Mr. Satish Kumar<br>& Mrs. Suneeta</h3>
-        <p>Parents of the Bride</p>
-      </article>
-
-      <article class="family-card reveal">
-        <p class="card-kicker">Groom's family</p>
-        <h3>Mr. Rajaram<br>& Mrs. Rajeshwari Devi</h3>
-        <p>Parents of the Groom</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- BLESSINGS -->
-<section class="content blessing">
-  <div class="inner reveal">
-    <p class="eyebrow">A moment for blessings</p>
-
-    <h2 class="title">
-      A wish for <em>the couple.</em>
-    </h2>
-
-    <button class="lotus" id="lotusBtn" aria-label="Show another blessing">
-      ❀
     </button>
 
-    <p class="blessing-text" id="blessingText">
-      May your life together be filled with laughter, understanding, and endless love.
-    </p>
 
-    <p class="blessing-hint">Tap the lotus for another blessing</p>
-  </div>
+    <div class="enter-text">
+
+        TOUCH THE SEAL TO ENTER
+
+    </div>
+
+
 </section>
 
-<!-- CLOSING -->
-<section class="content closing">
-  <div class="inner closing-panel reveal">
-    <p class="eyebrow">Until we meet</p>
 
-    <h2>
-      With love,<br>
-      Kiran & Ajay
-    </h2>
 
-    <div class="divider"></div>
+<!-- =====================================================
+     MAIN INVITATION
+===================================================== -->
 
-    <p class="closing-copy">
-      Your presence will be the greatest gift as we begin this beautiful journey together. We cannot wait to celebrate with you.
-    </p>
+<main
+    id="invitation"
+    class="hidden"
+>
 
-    <p class="closing-date">
-      24 November 2026 · Bareilly
-    </p>
-  </div>
-</section>
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section class="section hero">
+
+
+        <!-- LEFT CUTOUT -->
+
+        <div
+            class="cutout cutout-left"
+            data-speed="0.10"
+        >
+
+            <div class="cutout-card"></div>
+
+            <div class="cutout-arch"></div>
+
+            <div class="cutout-curtain-left"></div>
+
+            <div class="cutout-curtain-right"></div>
+
+            <div class="cutout-flower flower-a"></div>
+
+            <div class="cutout-flower flower-b"></div>
+
+            <div class="cutout-flower flower-c"></div>
+
+            <div class="cutout-flower flower-d"></div>
+
+            <div class="cutout-gold"></div>
+
+        </div>
+
+
+
+        <!-- CENTER -->
+
+        <div class="hero-content">
+
+
+            <div class="kicker">
+
+                A WEDDING INVITATION
+
+            </div>
+
+
+            <div class="hero-title">
+
+                Ajay
+
+                <span class="amp">
+                    &amp;
+                </span>
+
+                Kiran
+
+            </div>
+
+
+            <div class="hero-subtitle">
+
+                two hearts · one celebration
+
+            </div>
+
+
+            <div class="hero-star">
+
+                ✦
+
+            </div>
+
+
+            <div class="hero-location">
+
+                DIVA LAWN · BAREILLY
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- RIGHT CUTOUT -->
+
+        <div
+            class="cutout cutout-right"
+            data-speed="-0.08"
+        >
+
+            <div class="cutout-card"></div>
+
+            <div class="cutout-arch"></div>
+
+            <div class="cutout-curtain-left"></div>
+
+            <div class="cutout-curtain-right"></div>
+
+            <div class="cutout-flower flower-a"></div>
+
+            <div class="cutout-flower flower-b"></div>
+
+            <div class="cutout-flower flower-c"></div>
+
+            <div class="cutout-flower flower-d"></div>
+
+            <div class="cutout-gold"></div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         INTRO
+    ================================================== -->
+
+    <section class="section intro">
+
+
+        <div class="number">
+
+            01
+
+        </div>
+
+
+        <div class="kicker">
+
+            WITH LOVE &amp; JOY
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            We invite you to<br>
+
+            <em>celebrate</em> with us.
+
+        </h2>
+
+
+        <p class="copy">
+
+            A day of family, laughter, rituals and a new beginning —
+            brought together in the colours and warmth of an Indian wedding.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         SCRATCH DATE
+    ================================================== -->
+
+    <section class="section reveal">
+
+
+        <div class="number">
+
+            02
+
+        </div>
+
+
+        <div class="kicker">
+
+            A LITTLE SECRET
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            Scratch to<br>
+
+            <em>discover the day.</em>
+
+        </h2>
+
+
+
+        <div class="scratch-box">
+
+
+            <!-- DATE UNDER SCRATCH -->
+
+            <div class="date-card">
+
+
+                <div class="date-small">
+
+                    THE WEDDING DAY
+
+                </div>
+
+
+                <div class="date-large">
+
+                    24 NOVEMBER 2026
+
+                </div>
+
+
+                <div class="date-place">
+
+                    DIVA LAWN · BAREILLY
+
+                </div>
+
+
+            </div>
+
+
+            <!-- SCRATCH SURFACE -->
+
+            <canvas id="scratch"></canvas>
+
+
+        </div>
+
+
+        <div class="scratch-hint">
+
+            RUB GENTLY ACROSS THE CARD ↗
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         COUNTDOWN
+    ================================================== -->
+
+    <section class="section countdown-section">
+
+
+        <div class="number">
+
+            03
+
+        </div>
+
+
+        <div class="kicker">
+
+            THE COUNTDOWN
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            Until we<br>
+
+            <em>celebrate.</em>
+
+        </h2>
+
+
+
+        <div class="countdown">
+
+
+            <div class="count">
+
+                <strong id="days">
+                    00
+                </strong>
+
+                <span>
+                    DAYS
+                </span>
+
+            </div>
+
+
+            <div class="count">
+
+                <strong id="hours">
+                    00
+                </strong>
+
+                <span>
+                    HOURS
+                </span>
+
+            </div>
+
+
+            <div class="count">
+
+                <strong id="minutes">
+                    00
+                </strong>
+
+                <span>
+                    MINUTES
+                </span>
+
+            </div>
+
+
+            <div class="count">
+
+                <strong id="seconds">
+                    00
+                </strong>
+
+                <span>
+                    SECONDS
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         WEDDING
+    ================================================== -->
+
+    <section class="section wedding">
+
+
+        <!-- SIMPLE 2D MANDAP -->
+
+        <div class="mandap">
+
+
+            <div class="mandap-roof"></div>
+
+
+            <div class="pillar pillar-one"></div>
+
+            <div class="pillar pillar-two"></div>
+
+            <div class="pillar pillar-three"></div>
+
+            <div class="pillar pillar-four"></div>
+
+
+            <div class="mandap-flower mf-one"></div>
+
+            <div class="mandap-flower mf-two"></div>
+
+            <div class="mandap-flower mf-three"></div>
+
+            <div class="mandap-flower mf-four"></div>
+
+
+            <div class="mandap-base"></div>
+
+
+        </div>
+
+
+        <div class="kicker">
+
+            THE WEDDING
+
+        </div>
+
+
+        <div class="wedding-date">
+
+            24
+
+            <span>·</span>
+
+            11
+
+            <span>·</span>
+
+            26
+
+        </div>
+
+
+        <div class="wedding-location">
+
+            Diva Lawn<br>
+
+            Bareilly
+
+        </div>
+
+
+        <a
+            class="map-button"
+            href="https://www.google.com/maps/search/?api=1&query=Diva+Lawn+Bareilly"
+            target="_blank"
+            rel="noopener"
+        >
+
+            OPEN LOCATION ↗
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         CLOSING
+    ================================================== -->
+
+    <section class="section closing">
+
+
+        <div class="kicker">
+
+            WITH LOVE
+
+        </div>
+
+
+        <div class="closing-names">
+
+            Ajay
+
+            <span class="closing-amp">
+                &amp;
+            </span>
+
+            Kiran
+
+        </div>
+
+
+        <p class="copy">
+
+            See you beneath the lights.
+
+        </p>
+
+
+        <div class="final-monogram">
+
+            K A
+
+        </div>
+
+
+    </section>
+
 
 </main>
 
-<footer>
-  Kiran & Ajay · Diva Lawn · Dohra Road, Bareilly
-</footer>
+
 
 <script>
-/* =================================
-   MOBILE NAVIGATION
-================================= */
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
 
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-  menuBtn.textContent =
-    navLinks.classList.contains("open") ? "✕" : "☰";
-});
+/* =========================================================
+   OPEN INVITATION
+========================================================= */
 
-navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuBtn.textContent = "☰";
-  });
-});
+var openButton =
+    document.getElementById("openInvitation");
 
-/* =================================
-   WEDDING COUNTDOWN
-================================= */
-const weddingDate = new Date("2026-11-24T20:00:00+05:30").getTime();
+var entrance =
+    document.getElementById("entrance");
 
-function updateCountdown() {
-  const now = Date.now();
-  const distance = weddingDate - now;
+var invitation =
+    document.getElementById("invitation");
 
-  if (distance <= 0) {
-    document.getElementById("days").textContent = "00";
-    document.getElementById("hours").textContent = "00";
-    document.getElementById("minutes").textContent = "00";
-    document.getElementById("seconds").textContent = "00";
 
-    document.getElementById("countMessage").textContent =
-      "The celebration has begun!";
-    return;
-  }
+openButton.addEventListener(
+    "click",
+    function(){
 
-  const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const h = Math.floor((distance / (1000 * 60 * 60)) % 24);
-  const m = Math.floor((distance / (1000 * 60)) % 60);
-  const s = Math.floor((distance / 1000) % 60);
+        entrance.classList.add("hidden");
 
-  document.getElementById("days").textContent = d;
-  document.getElementById("hours").textContent = String(h).padStart(2, "0");
-  document.getElementById("minutes").textContent = String(m).padStart(2, "0");
-  document.getElementById("seconds").textContent = String(s).padStart(2, "0");
+        invitation.classList.remove("hidden");
+
+        window.scrollTo(0,0);
+
+    }
+);
+
+
+/* =========================================================
+   SCRATCH CARD
+========================================================= */
+
+var canvas =
+    document.getElementById("scratch");
+
+var ctx =
+    canvas.getContext("2d");
+
+var scratching =
+    false;
+
+var revealed =
+    false;
+
+
+/* SETUP */
+
+function setupScratch(){
+
+    var rect =
+        canvas.getBoundingClientRect();
+
+    var width =
+        Math.max(1,Math.floor(rect.width));
+
+    var height =
+        Math.max(1,Math.floor(rect.height));
+
+
+    canvas.width =
+        width;
+
+    canvas.height =
+        height;
+
+
+    /*
+       Scratch-card colour
+    */
+
+    var gradient =
+        ctx.createLinearGradient(
+            0,
+            0,
+            width,
+            height
+        );
+
+
+    gradient.addColorStop(
+        0,
+        "#c79d86"
+    );
+
+
+    gradient.addColorStop(
+        0.5,
+        "#b88670"
+    );
+
+
+    gradient.addColorStop(
+        1,
+        "#d4ad96"
+    );
+
+
+    ctx.globalCompositeOperation =
+        "source-over";
+
+
+    ctx.fillStyle =
+        gradient;
+
+
+    ctx.fillRect(
+        0,
+        0,
+        width,
+        height
+    );
+
+
+    /*
+       Decorative scratch-card text
+    */
+
+    ctx.fillStyle =
+        "rgba(255,245,235,.72)";
+
+
+    ctx.font =
+        "12px Arial";
+
+
+    ctx.textAlign =
+        "center";
+
+
+    ctx.textBaseline =
+        "middle";
+
+
+    ctx.fillText(
+        "SCRATCH HERE",
+        width / 2,
+        height / 2
+    );
+
 }
+
+
+/* ERASE */
+
+function scratchAt(x,y){
+
+    if(revealed){
+        return;
+    }
+
+
+    ctx.globalCompositeOperation =
+        "destination-out";
+
+
+    ctx.beginPath();
+
+
+    ctx.arc(
+        x,
+        y,
+        28,
+        0,
+        Math.PI * 2
+    );
+
+
+    ctx.fill();
+
+
+    checkScratch();
+
+}
+
+
+/* POINTER */
+
+function pointerPosition(event){
+
+    var rect =
+        canvas.getBoundingClientRect();
+
+
+    var x =
+        event.clientX -
+        rect.left;
+
+
+    var y =
+        event.clientY -
+        rect.top;
+
+
+    scratchAt(
+        x,
+        y
+    );
+
+}
+
+
+/* MOUSE */
+
+canvas.addEventListener(
+    "mousedown",
+    function(event){
+
+        scratching = true;
+
+        pointerPosition(event);
+
+    }
+);
+
+
+canvas.addEventListener(
+    "mousemove",
+    function(event){
+
+        if(scratching){
+
+            pointerPosition(event);
+
+        }
+
+    }
+);
+
+
+document.addEventListener(
+    "mouseup",
+    function(){
+
+        scratching = false;
+
+    }
+);
+
+
+/* TOUCH */
+
+canvas.addEventListener(
+    "touchstart",
+    function(event){
+
+        event.preventDefault();
+
+        scratching = true;
+
+        var touch =
+            event.touches[0];
+
+
+        pointerPosition(touch);
+
+    },
+    {
+        passive:false
+    }
+);
+
+
+canvas.addEventListener(
+    "touchmove",
+    function(event){
+
+        event.preventDefault();
+
+        if(!scratching){
+            return;
+        }
+
+
+        var touch =
+            event.touches[0];
+
+
+        pointerPosition(touch);
+
+    },
+    {
+        passive:false
+    }
+);
+
+
+document.addEventListener(
+    "touchend",
+    function(){
+
+        scratching = false;
+
+    }
+);
+
+
+/* CHECK REVEAL */
+
+function checkScratch(){
+
+    /*
+       Check every few pixels rather than
+       every single pixel for performance.
+    */
+
+    var data =
+        ctx.getImageData(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        ).data;
+
+
+    var transparent =
+        0;
+
+    var total =
+        0;
+
+
+    for(
+        var i=3;
+        i<data.length;
+        i+=16
+    ){
+
+        total++;
+
+        if(data[i] < 40){
+
+            transparent++;
+
+        }
+
+    }
+
+
+    var percentage =
+        transparent / total;
+
+
+    if(percentage > 0.45){
+
+        revealed = true;
+
+        canvas.style.transition =
+            "opacity .8s ease";
+
+
+        canvas.style.opacity =
+            "0";
+
+
+        setTimeout(
+            function(){
+
+                if(canvas){
+
+                    canvas.style.display =
+                        "none";
+
+                }
+
+            },
+            850
+        );
+
+    }
+
+}
+
+
+setupScratch();
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+var weddingDate =
+    new Date(
+        "2026-11-24T00:00:00+05:30"
+    );
+
+
+function twoDigits(number){
+
+    if(number < 10){
+
+        return "0" + number;
+
+    }
+
+    return String(number);
+
+}
+
+
+function updateCountdown(){
+
+    var now =
+        new Date();
+
+
+    var difference =
+        weddingDate.getTime()
+        -
+        now.getTime();
+
+
+    if(difference < 0){
+
+        difference = 0;
+
+    }
+
+
+    var totalSeconds =
+        Math.floor(
+            difference / 1000
+        );
+
+
+    var days =
+        Math.floor(
+            totalSeconds / 86400
+        );
+
+
+    var hours =
+        Math.floor(
+            (totalSeconds % 86400)
+            / 3600
+        );
+
+
+    var minutes =
+        Math.floor(
+            (totalSeconds % 3600)
+            / 60
+        );
+
+
+    var seconds =
+        totalSeconds % 60;
+
+
+    document
+        .getElementById("days")
+        .textContent =
+        twoDigits(days);
+
+
+    document
+        .getElementById("hours")
+        .textContent =
+        twoDigits(hours);
+
+
+    document
+        .getElementById("minutes")
+        .textContent =
+        twoDigits(minutes);
+
+
+    document
+        .getElementById("seconds")
+        .textContent =
+        twoDigits(seconds);
+
+}
+
 
 updateCountdown();
-setInterval(updateCountdown, 1000);
 
-/* =================================
-   SCRATCH CARD
-================================= */
-const canvas = document.getElementById("scratchCanvas");
-const card = document.getElementById("scratchCard");
-const ctx = canvas.getContext("2d");
 
-let drawing = false;
-let cleared = false;
-let lastPoint = null;
+setInterval(
+    updateCountdown,
+    1000
+);
 
-function setupScratchCard() {
-  if (cleared) return;
 
-  const rect = card.getBoundingClientRect();
-  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+/* =========================================================
+   SCROLLING CUTOUTS
+========================================================= */
 
-  canvas.width = Math.max(1, Math.round(rect.width * dpr));
-  canvas.height = Math.max(1, Math.round(rect.height * dpr));
+window.addEventListener(
+    "scroll",
+    function(){
 
-  const gradient = ctx.createLinearGradient(
-    0, 0, canvas.width, canvas.height
-  );
+        var scrollY =
+            window.pageYOffset ||
+            document.documentElement.scrollTop ||
+            0;
 
-  gradient.addColorStop(0, "#d8c5ad");
-  gradient.addColorStop(0.5, "#efe4d4");
-  gradient.addColorStop(1, "#c9b293");
 
-  ctx.globalCompositeOperation = "source-over";
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+        var cutouts =
+            document.querySelectorAll(
+                ".cutout"
+            );
 
-  ctx.strokeStyle = "rgba(120,82,65,.35)";
-  ctx.lineWidth = 2 * dpr;
-  ctx.strokeRect(
-    10 * dpr, 10 * dpr,
-    canvas.width - 20 * dpr,
-    canvas.height - 20 * dpr
-  );
 
-  ctx.fillStyle = "#705447";
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  ctx.font = `${18 * dpr}px Georgia`;
-  ctx.fillText("K  &  A", canvas.width / 2, canvas.height / 2 - 12 * dpr);
+        for(
+            var i=0;
+            i<cutouts.length;
+            i++
+        ){
 
-  ctx.font = `${10 * dpr}px Arial`;
-  ctx.fillText(
-    "RUB GENTLY TO REVEAL",
-    canvas.width / 2,
-    canvas.height / 2 + 15 * dpr
-  );
+            var speed =
+                parseFloat(
+                    cutouts[i]
+                        .getAttribute(
+                            "data-speed"
+                        )
+                );
 
-  ctx.globalCompositeOperation = "destination-out";
-}
 
-function revealScratchCard() {
-  if (cleared) return;
+            var movement =
+                scrollY * speed;
 
-  cleared = true;
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  canvas.classList.add("cleared");
 
-  document.getElementById("scratchHint").textContent =
-    "Date revealed — save the day!";
-}
+            var rotation =
+                Math.sin(
+                    scrollY / 600
+                ) * 1.5;
 
-function getScratchPoint(event) {
-  const rect = canvas.getBoundingClientRect();
 
-  return {
-    x: (event.clientX - rect.left) * canvas.width / rect.width,
-    y: (event.clientY - rect.top) * canvas.height / rect.height
-  };
-}
+            cutouts[i].style.transform =
+                "translate3d(0," +
+                movement +
+                "px,0) rotate(" +
+                rotation +
+                "deg)";
 
-function scratch(event) {
-  if (!drawing || cleared) return;
+        }
 
-  const point = getScratchPoint(event);
+    },
+    {
+        passive:true
+    }
+);
 
-  ctx.globalCompositeOperation = "destination-out";
-  ctx.lineWidth = Math.max(35, canvas.width * 0.1);
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
 
-  ctx.beginPath();
+/* =========================================================
+   RESIZE SCRATCH CARD
+========================================================= */
 
-  if (lastPoint) {
-    ctx.moveTo(lastPoint.x, lastPoint.y);
-    ctx.lineTo(point.x, point.y);
-  } else {
-    ctx.arc(point.x, point.y, ctx.lineWidth / 2, 0, Math.PI * 2);
+window.addEventListener(
+    "resize",
+    function(){
+
+        if(!revealed){
+
+            setupScratch();
+
+        }
+
+    }
+);
+
+</script>
+<!-- MOBILE-SAFE PRELOADER FIX -->
+<script>
+(function () {
+  const preloader = document.getElementById('preloader');
+  const gate = document.getElementById('gate');
+  const percent = document.getElementById('preloadPct');
+  const progress = document.getElementById('preloadProg');
+
+  if (!preloader || !gate) return;
+
+  let finished = false;
+  let value = 0;
+
+  function finishLoading() {
+    if (finished) return;
+    finished = true;
+
+    value = 100;
+
+    if (percent) percent.textContent = '100%';
+
+    if (progress) {
+      progress.style.strokeDashoffset = '0';
+    }
+
+    preloader.classList.add('is-hidden');
+
+    setTimeout(function () {
+      gate.classList.add('is-active');
+    }, 500);
   }
 
-  ctx.stroke();
-  lastPoint = point;
-}
+  // Smooth loading percentage
+  const loadingTimer = setInterval(function () {
+    if (finished) {
+      clearInterval(loadingTimer);
+      return;
+    }
 
-canvas.addEventListener("pointerdown", event => {
-  if (cleared) return;
+    if (value < 90) {
+      value += Math.max(1, Math.ceil((90 - value) * 0.12));
 
-  drawing = true;
-  lastPoint = null;
-
-  try {
-    canvas.setPointerCapture(event.pointerId);
-  } catch (e) {}
-
-  scratch(event);
-});
-
-canvas.addEventListener("pointermove", scratch);
-
-function stopScratch() {
-  drawing = false;
-  lastPoint = null;
-}
-
-canvas.addEventListener("pointerup", stopScratch);
-canvas.addEventListener("pointercancel", stopScratch);
-
-document.getElementById("revealBtn")
-  .addEventListener("click", revealScratchCard);
-
-setupScratchCard();
-
-window.addEventListener("resize", () => {
-  if (!cleared) setupScratchCard();
-});
-
-/* =================================
-   INTERACTIVE BLESSINGS
-================================= */
-const blessings = [
-  "May your life together be filled with laughter, understanding, and endless love.",
-  "May every new morning bring you closer, and every evening remind you how lucky you are.",
-  "May your home always be full of warmth, kindness, good health, and happy memories.",
-  "May patience guide your words, friendship strengthen your bond, and love light your way.",
-  "May this beautiful beginning grow into a lifetime of shared dreams and little joys."
-];
-
-let blessingIndex = 0;
-
-document.getElementById("lotusBtn").addEventListener("click", () => {
-  blessingIndex = (blessingIndex + 1) % blessings.length;
-
-  const text = document.getElementById("blessingText");
-  text.style.opacity = "0";
-
-  setTimeout(() => {
-    text.textContent = blessings[blessingIndex];
-    text.style.opacity = "1";
-  }, 200);
-});
-
-/* =================================
-   SCROLL REVEAL ANIMATIONS
-================================= */
-const revealElements = document.querySelectorAll(".reveal");
-
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
+      if (percent) {
+        percent.textContent = value + '%';
       }
-    });
-  }, { threshold: 0.12 });
 
-  revealElements.forEach(element => observer.observe(element));
+      if (progress) {
+        progress.style.strokeDashoffset =
+          264 - (264 * value / 100);
+      }
+    }
+  }, 35);
 
-  // Fallback: make sure content never remains invisible.
-  setTimeout(() => {
-    revealElements.forEach(element => element.classList.add("visible"));
-  }, 4000);
-} else {
-  revealElements.forEach(element => element.classList.add("visible"));
-}
+  // Main fallback: never allow the loader to get stuck
+  setTimeout(finishLoading, 1800);
 
-/* =================================
-   SCROLL PROGRESS BAR
-================================= */
-window.addEventListener("scroll", () => {
-  const scrollable =
-    document.documentElement.scrollHeight - window.innerHeight;
+  // Additional safety fallback
+  window.addEventListener('load', finishLoading, { once: true });
 
-  const progress = scrollable > 0
-    ? (window.scrollY / scrollable) * 100
-    : 0;
-
-  document.getElementById("progress").style.width = progress + "%";
-}, { passive: true });
+})();
 </script>
 
 </body>
